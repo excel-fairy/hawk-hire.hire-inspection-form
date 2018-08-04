@@ -7,7 +7,7 @@ function exportSheet(sheet){
         exportFileName: fileName,
         range: sheet.exportRange
     };
-    exportFile(exportOptions);
+    ExportSpreadsheet.export(exportOptions);
 }
 
 function exportPreDeliveryForm(){

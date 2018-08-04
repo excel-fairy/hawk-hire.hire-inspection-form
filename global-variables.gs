@@ -8,8 +8,8 @@ var PRE_DELIVERY_FORM_SHEET = {
     exportRange: {
         r1: 2,
         r2: 56,
-        c1: letterToColumn('B'),
-        c2: letterToColumn('M')
+        c1: ColumnNames.letterToColumn('B'),
+        c2: ColumnNames.letterToColumn('M')
     }
 };
 
@@ -19,7 +19,7 @@ var POST_HIRE_FORM_SHEET = {
     exportRange: {
         r1: 2,
         r2: 59,
-        c1: letterToColumn('B'),
-        c2: letterToColumn('M')
+        c1: ColumnNames.letterToColumn('B'),
+        c2: ColumnNames.letterToColumn('M')
     }
 };
