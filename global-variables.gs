@@ -10,7 +10,8 @@ var PRE_DELIVERY_FORM_SHEET = {
         r2: 56,
         c1: ColumnNames.letterToColumn('B'),
         c2: ColumnNames.letterToColumn('M')
-    }
+    },
+    unitNumberCell: 'J13'
 };
 
 var POST_HIRE_FORM_SHEET = {
@@ -21,5 +22,6 @@ var POST_HIRE_FORM_SHEET = {
         r2: 59,
         c1: ColumnNames.letterToColumn('B'),
         c2: ColumnNames.letterToColumn('M')
-    }
+    },
+    unitNumberCell: 'J13'
 };

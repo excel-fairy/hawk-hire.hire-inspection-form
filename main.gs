@@ -2,7 +2,7 @@ function exportSheet(sheet){
     var fileName = sheet.name + ' - ' + getTodayDate();
 
     var exportOptions = {
-        exportFolderId: EXPORT_DIR.id,
+        exportFolderId: getExportFolder(sheet).getId(),
         sheetId: sheet.sheet.getSheetId(),
         exportFileName: fileName,
         range: sheet.exportRange
@@ -22,4 +22,3 @@ function getTodayDate() {
     var dateStr = new Date().toJSON().slice(0,10).split('-');
     return dateStr[2] + '/' + dateStr[1] + '/' + dateStr[0];
 }
-
