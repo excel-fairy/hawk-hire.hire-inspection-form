@@ -1,5 +1,5 @@
 function exportSheet(sheet){
-    var fileName = sheet.name + ' - ' + getTodayDate();
+    var fileName = sheet.sheet.getRange(sheet.exportFileNameCell).getValue();
 
     var exportOptions = {
         exportFolderId: getExportFolder(sheet).getId(),

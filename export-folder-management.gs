@@ -1,6 +1,6 @@
 function getExportFolder(sheet){
     var unitNumber = sheet.sheet.getRange(sheet.unitNumberCell).getValue();
-    return getChildFolderByNameAndCreateIfNotExist(getChildFolderByNameAndCreateIfNotExist(EXPORT_DIR.id, unitNumber).getId(), getSubfolderNameFromExportedSheet(sheet));
+    return getChildFolderByNameAndCreateIfNotExist(getChildFolderByNameAndCreateIfNotExist(EXPORT_DIR_ID, unitNumber).getId(), getSubfolderNameFromExportedSheet(sheet));
 }
 
 function getChildFolderByNameAndCreateIfNotExist(parentFolderId, childFolderName){

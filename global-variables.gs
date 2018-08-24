@@ -1,7 +1,3 @@
-var EXPORT_DIR = {
-    id: EXPORT_DIR_ID
-};
-
 var PRE_DELIVERY_FORM_SHEET = {
     name: 'Pre delivery form',
     sheet: SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Pre delivery form'),
@@ -11,7 +7,8 @@ var PRE_DELIVERY_FORM_SHEET = {
         c1: ColumnNames.letterToColumn('B'),
         c2: ColumnNames.letterToColumn('M')
     },
-    unitNumberCell: 'J13'
+    unitNumberCell: 'J13',
+    exportFileNameCell: 'C1'
 };
 
 var POST_HIRE_FORM_SHEET = {
@@ -23,5 +20,6 @@ var POST_HIRE_FORM_SHEET = {
         c1: ColumnNames.letterToColumn('B'),
         c2: ColumnNames.letterToColumn('M')
     },
-    unitNumberCell: 'J13'
+    unitNumberCell: 'J13',
+    exportFileNameCell: 'C1'
 };
