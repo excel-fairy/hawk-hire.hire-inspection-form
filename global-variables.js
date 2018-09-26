@@ -7,7 +7,7 @@ var PRE_DELIVERY_FORM_SHEET = {
         c1: ColumnNames.letterToColumn('B'),
         c2: ColumnNames.letterToColumn('M')
     },
-    unitNumberCell: 'J13',
+    unitNumberCell: 'I13',
     exportFileNameCell: 'C1'
 };
 
@@ -20,6 +20,23 @@ var POST_HIRE_FORM_SHEET = {
         c1: ColumnNames.letterToColumn('B'),
         c2: ColumnNames.letterToColumn('M')
     },
-    unitNumberCell: 'J13',
+    unitNumberCell: 'I13',
     exportFileNameCell: 'C1'
+};
+
+var DATA_VALID_SHEET = {
+    name: 'data valid',
+    sheet: SpreadsheetApp.getActiveSpreadsheet().getSheetByName('data valid'),
+    mailData: {
+        preDevliveryForm: {
+            recipientAddressCell: 'AH4',
+            subjectCell: 'AH5',
+            messageCell: 'AH6'
+        },
+        postDevliveryForm: {
+            recipientAddressCell: 'AI4',
+            subjectCell: 'AI5',
+            messageCell: 'AI6'
+        }
+    }
 };

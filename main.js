@@ -7,7 +7,8 @@ function exportSheet(sheet){
         exportFileName: fileName,
         range: sheet.exportRange
     };
-    ExportSpreadsheet.export(exportOptions);
+    var pdfFile = ExportSpreadsheet.export(exportOptions);
+    sendEmail(sheet, pdfFile);
 }
 
 function exportPreDeliveryForm(){
@@ -21,4 +22,27 @@ function exportPostHireForm(){
 function getTodayDate() {
     var dateStr = new Date().toJSON().slice(0,10).split('-');
     return dateStr[2] + '/' + dateStr[1] + '/' + dateStr[0];
+}
+
+function sendEmail(sheet, attachment) {
+    var emailData = getEmailData(sheet);
+    var recipient = DATA_VALID_SHEET.sheet.getRange(emailData.recipientAddressCell).getValue();
+    var subject = DATA_VALID_SHEET.sheet.getRange(emailData.subjectCell).getValue();
+    var message = DATA_VALID_SHEET.sheet.getRange(emailData.messageCell).getValue();
+    var emailOptions = {
+        attachments: [attachment.getAs(MimeType.PDF)],
+        name: 'Automatic hire inspection form mail sender'
+    };
+    MailApp.sendEmail(recipient, subject, message, emailOptions);
+}
+
+function getEmailData(sheet){
+    switch (sheet.name) {
+        case 'Pre delivery form':
+            return DATA_VALID_SHEET.mailData.preDevliveryForm;
+        case 'Post hire form':
+            return DATA_VALID_SHEET.mailData.postDevliveryForm;
+        default:
+            return null;
+    }
 }
