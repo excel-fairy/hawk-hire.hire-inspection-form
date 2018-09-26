@@ -8,7 +8,8 @@ var PRE_DELIVERY_FORM_SHEET = {
         c2: ColumnNames.letterToColumn('M')
     },
     unitNumberCell: 'I13',
-    exportFileNameCell: 'C1'
+    exportFileNameCell: 'C1',
+    exportCheckboxCell: 'N1'
 };
 
 var POST_HIRE_FORM_SHEET = {
@@ -21,7 +22,8 @@ var POST_HIRE_FORM_SHEET = {
         c2: ColumnNames.letterToColumn('M')
     },
     unitNumberCell: 'I13',
-    exportFileNameCell: 'C1'
+    exportFileNameCell: 'C1',
+    exportCheckboxCell: 'N1'
 };
 
 var DATA_VALID_SHEET = {
