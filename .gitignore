@@ -1,3 +1,5 @@
 private-variables.gs
 .idea/
 hawk-hire.hire-inspection-form.iml
+.production-clasp.json
+.dev-clasp.json
