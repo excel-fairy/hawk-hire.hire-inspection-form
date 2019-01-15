@@ -14,7 +14,7 @@ function getChildFolderByNameAndCreateIfNotExist(parentFolderId, childFolderName
 
 function getSubfolderNameFromExportedSheet(sheet){
     switch (sheet.name) {
-        case 'Pre delivery form':
+        case 'Pre Hire form':
             return 'Pre Hire Docs';
         case 'Post hire form':
             return 'Post Hire Docs';

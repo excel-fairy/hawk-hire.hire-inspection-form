@@ -24,6 +24,7 @@ function getTodayDate() {
     return dateStr[2] + '/' + dateStr[1] + '/' + dateStr[0];
 }
 
+// Just added to automate email when saving as PDF
 function sendEmail(sheet, attachment) {
     var emailData = getEmailData(sheet);
     var recipient = DATA_VALID_SHEET.sheet.getRange(emailData.recipientAddressCell).getValue();
@@ -38,7 +39,7 @@ function sendEmail(sheet, attachment) {
 
 function getEmailData(sheet){
     switch (sheet.name) {
-        case 'Pre delivery form':
+        case 'Pre Hire form':
             return DATA_VALID_SHEET.mailData.preDevliveryForm;
         case 'Post hire form':
             return DATA_VALID_SHEET.mailData.postDevliveryForm;

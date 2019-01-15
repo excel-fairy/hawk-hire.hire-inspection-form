@@ -1,29 +1,29 @@
 var PRE_DELIVERY_FORM_SHEET = {
-    name: 'Pre delivery form',
-    sheet: SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Pre delivery form'),
+    name: 'Pre Hire form',
+    sheet: SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Pre Hire form'),
     exportRange: {
-        r1: 2,
-        r2: 56,
-        c1: ColumnNames.letterToColumn('B'),
-        c2: ColumnNames.letterToColumn('M')
+        r1: 1,
+        r2: 126,
+        c1: ColumnNames.letterToColumn('A'),
+        c2: ColumnNames.letterToColumn('O')
     },
-    unitNumberCell: 'I13',
+    unitNumberCell: 'L15',
     exportFileNameCell: 'C1',
-    exportCheckboxCell: 'N1'
+    exportCheckboxCell: 'Q1'
 };
 
 var POST_HIRE_FORM_SHEET = {
     name: 'Post hire form',
     sheet: SpreadsheetApp.getActiveSpreadsheet().getSheetByName('Post hire form'),
     exportRange: {
-        r1: 2,
-        r2: 59,
-        c1: ColumnNames.letterToColumn('B'),
-        c2: ColumnNames.letterToColumn('M')
+        r1: 1,
+        r2: 126,
+        c1: ColumnNames.letterToColumn('A'),
+        c2: ColumnNames.letterToColumn('O')
     },
-    unitNumberCell: 'I13',
+    unitNumberCell: 'L15',
     exportFileNameCell: 'C1',
-    exportCheckboxCell: 'N1'
+    exportCheckboxCell: 'Q1'
 };
 
 var DATA_VALID_SHEET = {
